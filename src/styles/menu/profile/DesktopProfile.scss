@@ -17,7 +17,7 @@ $cat-ear-offset: 11px;
   box-sizing: border-box;
 
   // 배경 계춘회 반투명 이미지
-  background-image: url('@assets/image/gyechune_live2d_desktop_transparent_cut.webp');
+  background-image: url('@assets/image/profile/gyechune-live2d-transparent-01.webp');
   background-repeat: no-repeat;
   background-position-y: 53.7%;
   background-position-x: 43%;
@@ -54,6 +54,7 @@ $cat-ear-offset: 11px;
     img {
       object-fit: contain;
       height: 98%;
+      padding-left: 10px;
     }
   }
 
@@ -113,8 +114,6 @@ $cat-ear-offset: 11px;
         margin-top: 5%;
         margin-bottom: 7%;
         font-size: 15px;
-        // font-family: 'YESGothic-Regular';
-        // font-family: 'NanumSquareNeo';
 
         p {
           margin: 0;

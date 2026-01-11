@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Swipe from 'react-easy-swipe';
 
-import Gye2d03 from '@assets/image/gyechune_live2d.webp';
+// import Gye2d03 from '@assets/image/gyechune_live2d.webp';
+import Gye2d03 from '@assets/image/profile/gyechune-live2d-01.webp';
 import chunsik from '@assets/image/chunsik_character.png';
 
 import '@styles/menu/profile/PortraitProfile.scss';
@@ -20,6 +21,7 @@ import {
   ContentCounter,
 } from './PortraitProfileStyledComps';
 import { INTRODUCE_TEXT } from '@src/assets/contents/contents';
+import { Description } from './Description';
 
 export interface PortraitProfileProps {
   animateClass: string;
@@ -49,21 +51,29 @@ const PortraitProfile: React.FC<PortraitProfileProps> = ({
         <div className='gye-profile-bio-picture'></div>
         <div className='gye-profile-catbox-wrapper'>
           <div className='profile-item profile-item-01 birth-wrapper'>
-            <div className='cat-box birth-title'>생일</div>
-            <div className='profile-content birth-content'>1월 8일</div>
+            <div className='cat-box birth-title'>{Description.BirthTitle}</div>
+            <div className='profile-content birth-content'>
+              {Description.Birth}
+            </div>
           </div>
           <div className='profile-item profile-item-02 height-wrapper'>
-            <div className='cat-box height-title'>키</div>
-            <div className='profile-content height-content'>163.8cm</div>
+            <div className='cat-box height-title'>
+              {Description.HeightTitle}
+            </div>
+            <div className='profile-content height-content'>
+              {Description.Height}
+            </div>
           </div>
           <div className='profile-item profile-item-03 age-wrapper'>
-            <div className='cat-box age-title'>나이</div>
-            <div className='profile-content age-content'>예쁜나이</div>
+            <div className='cat-box age-title'>{Description.AgeTitle}</div>
+            <div className='profile-content age-content'>{Description.Age}</div>
           </div>
           <div className='profile-item profile-item-04 fanname-wrapper'>
-            <div className='cat-box fanname-title'>팬네임</div>
+            <div className='cat-box fanname-title'>
+              {Description.FannameTitle}
+            </div>
             <div className='profile-content fanname-content'>
-              춘식이
+              {Description.Fanname}
               <figure className='fanname-image profile-chunsik-character'>
                 <img
                   src={chunsik}
@@ -74,18 +84,26 @@ const PortraitProfile: React.FC<PortraitProfileProps> = ({
             </div>
           </div>
           <div className='profile-item profile-item-05 manufacturer-wrapper'>
-            <div className='cat-box manufacturer-title'>제조</div>
-            <div className='profile-content manufacturer-content'>Sonsiru</div>
+            <div className='cat-box manufacturer-title'>
+              {Description.MamaTitle}
+            </div>
+            <div className='profile-content manufacturer-content'>
+              {Description.Mama}
+            </div>
           </div>
           <div className='profile-item profile-item-06 assembly-wrapper'>
-            <div className='cat-box assembly-title'>조립</div>
-            <div className='profile-content assembly-content'>KAXA</div>
+            <div className='cat-box assembly-title'>
+              {Description.PapaTitle}
+            </div>
+            <div className='profile-content assembly-content'>
+              {Description.Papa}
+            </div>
           </div>
         </div>
       </div>
     </>,
     <>
-      <div className={`gye-image-container portrait `}>
+      <div className={`gye-image-container portrait full-shot`}>
         <img
           src={Gye2d03}
           alt='계춘회 live 2d image'

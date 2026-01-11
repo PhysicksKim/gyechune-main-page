@@ -5,11 +5,14 @@ $dark-grey: #333333;
 $dark-grey-hover: #7e7e7e;
 
 $background-pink-transparent: #f5c5cccc;
-$background-pink-modal: rgb(252, 186, 197);
+
+// Landscape Profile vertical bar of name title on the left side
+$background-pink-modal: rgb(253 133 153);
 
 $border-pink: #f33e3e;
 
-$profile-cat-box-border: #ffb8b8;
+// $profile-cat-box-border: #ffb8b8;
+$profile-cat-box-border: oklch(0.77 0.1 19.55);
 $profile-cat-box-background: #f5c5cc;
 
 $profile-name: #9b404f;

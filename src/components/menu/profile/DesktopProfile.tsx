@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Gye2d03 from '@assets/image/gyechune_live2d.webp';
+import Gye2d03 from '@assets/image/profile/gyechune-live2d-01.webp';
+
 import chunsik from '@assets/image/chunsik_character.png';
 import chzzkLogo from '@assets/image/logo_chzzk.png';
 import youtubeLogo from '@assets/image/logo_youtube.png';
@@ -8,6 +9,7 @@ import naverCafeLogo from '@assets/image/logo_naver_cafe.png';
 
 import '@styles/menu/profile/DesktopProfile.scss';
 import { INTRODUCE_TEXT } from '@src/assets/contents/contents';
+import { Description } from './Description';
 
 export interface DesktopProfileProps {
   animateClass: string;
@@ -30,28 +32,42 @@ const DesktopProfile: React.FC<DesktopProfileProps> = ({ animateClass }) => {
           <div className='gye-profile-bio'>
             <div className='profile-item profile-item-01 birth-wrapper'>
               <div className='cat-box birth-title'>
-                <div className='cat-box-vertical-aligner'>생일</div>
+                <div className='cat-box-vertical-aligner'>
+                  {Description.BirthTitle}
+                </div>
               </div>
-              <div className='profile-content birth-content'>1월 8일</div>
+              <div className='profile-content birth-content'>
+                {Description.Birth}
+              </div>
             </div>
             <div className='profile-item profile-item-02 height-wrapper'>
               <div className='cat-box height-title'>
-                <div className='cat-box-vertical-aligner'>키</div>
+                <div className='cat-box-vertical-aligner'>
+                  {Description.HeightTitle}
+                </div>
               </div>
-              <div className='profile-content height-content'>163.8cm</div>
+              <div className='profile-content height-content'>
+                {Description.Height}
+              </div>
             </div>
             <div className='profile-item profile-item-03 age-wrapper'>
               <div className='cat-box age-title'>
-                <div className='cat-box-vertical-aligner'>나이</div>
+                <div className='cat-box-vertical-aligner'>
+                  {Description.AgeTitle}
+                </div>
               </div>
-              <div className='profile-content age-content'>예쁜나이</div>
+              <div className='profile-content age-content'>
+                {Description.Age}
+              </div>
             </div>
             <div className='profile-item profile-item-04 fanname-wrapper'>
               <div className='cat-box fanname-title'>
-                <div className='cat-box-vertical-aligner'>팬네임</div>
+                <div className='cat-box-vertical-aligner'>
+                  {Description.FannameTitle}
+                </div>
               </div>
               <div className='profile-content fanname-content'>
-                춘식이
+                {Description.Fanname}
                 <figure className='fanname-image profile-chunsik-character'>
                   <img src={chunsik} alt='춘식이'></img>
                 </figure>
@@ -59,17 +75,23 @@ const DesktopProfile: React.FC<DesktopProfileProps> = ({ animateClass }) => {
             </div>
             <div className='profile-item profile-item-05 manufacturer-wrapper'>
               <div className='cat-box manufacturer-title'>
-                <div className='cat-box-vertical-aligner'>제조</div>
+                <div className='cat-box-vertical-aligner'>
+                  {Description.MamaTitle}
+                </div>
               </div>
               <div className='profile-content manufacturer-content'>
-                Sonsiru
+                {Description.Mama}
               </div>
             </div>
             <div className='profile-item profile-item-06 assembly-wrapper'>
               <div className='cat-box assembly-title'>
-                <div className='cat-box-vertical-aligner'>조립</div>
+                <div className='cat-box-vertical-aligner'>
+                  {Description.PapaTitle}
+                </div>
               </div>
-              <div className='profile-content assembly-content'>KAXA</div>
+              <div className='profile-content assembly-content'>
+                {Description.Papa}
+              </div>
             </div>
           </div>
           <div className='gye-social'>
